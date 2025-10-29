@@ -1,0 +1,80 @@
+/* Background gradients and base */
+body[data-theme="light"] {
+  background: #f7fafc;
+  color: #1a202c;
+}
+
+body[data-theme="dark"] {
+  background: #1a202c;
+  color: #f7fafc;
+}
+
+/* Navbar */
+.navbar {
+  background: #4a2c8a;
+}
+
+/* Buttons */
+.btn-outline-primary,
+.btn-gradient {
+  background: linear-gradient(90deg, #6b46c1, #9f7aea);
+  color: white;
+  border: none;
+}
+.btn-gradient:hover {
+  background: #4a2c8a;
+  color: #0d0310;
+  box-shadow: 0 4px 15px rgba(111, 66, 193, 0.7);
+}
+
+.headline {
+  color: #4a2c8a;
+}
+
+.text-primary {
+  color: #6b46c1 !important;
+}
+
+.text-secondary {
+  color: #9f7aea !important;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.fst-italic {
+  font-style: italic;
+}
+
+/* Card background */
+.project-card {
+  background: linear-gradient(135deg, #9f7aea 0%, #e9d8fd 100%);
+  color: #1a202c;
+}
+
+.text-accent {
+  color: #6b46c1;
+}
+
+/* About section */
+.about-section {
+  border-radius: 1em;
+  padding: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body[data-theme="light"] .about-section {
+  background: #e9d8fd;
+  color: #4a2c8a;
+  box-shadow: 0 8px 20px rgba(111, 66, 193, 0.15);
+}
+body[data-theme="light"] .about-section p {
+  color: black !important;
+}
+
+body[data-theme="dark"] .about-section {
+  background: #4a2c8a !important;
+  color: #e9d8fd !important;
+  box-shadow: 0 8px 20px rgba(174, 162, 255, 0.6) !important;
+}
