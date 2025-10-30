@@ -78,3 +78,122 @@ body[data-theme="dark"] .about-section {
   color: #e9d8fd !important;
   box-shadow: 0 8px 20px rgba(174, 162, 255, 0.6) !important;
 }
+
+/* Skills */
+/* .skill-card {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  transition: width 0.5s ease;
+}
+
+.--bs-progress-bar, .bg-primary {
+  background-color: #4a2c8a !important;
+}
+
+@media (max-width: 768px) {
+  .skill-card {
+    margin-bottom: 1.5rem;
+  }
+} */
+
+/* ============================= */
+/* Skills Section (Light & Dark) */
+/* ============================= */
+
+.skills-section {
+  padding: 3rem 0;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Light Mode */
+body[data-theme="light"] .skills-section {
+  background: linear-gradient(180deg, #f7fafc 0%, #ede9fe 100%);
+  color: #1a202c;
+}
+
+body[data-theme="light"] .skill-card {
+  /* background: #ffffff; */
+  color: #1a202c;
+  box-shadow: 0 6px 16px rgba(111, 66, 193, 0.15);
+  border: 1px solid #e2e8f0;
+}
+
+/* Dark Mode */
+body[data-theme="dark"] .skills-section {
+  background: linear-gradient(180deg, #1a202c 0%, #2d3748 100%);
+  color: #e9d8fd;
+}
+
+body[data-theme="dark"] .skill-card {
+  background: #2d3748;
+  color: #e9d8fd;
+  border: 1px solid #4a2c8a;
+  box-shadow: 0 6px 16px rgba(159, 122, 234, 0.25);
+}
+
+/* Headings and list styles */
+.skills-section h3 {
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.skills-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-section li {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  position: relative;
+}
+/* Progress bar default color */
+.bg-primary {
+  background-color: #4a2c8a !important;
+  transition: background-color 0.3s ease;
+}
+
+/* On hover (light mode stays the same) */
+body[data-theme="light"] .skill-card:hover .bg-primary {
+  background-color: #6b46c1 !important; /* slightly deeper violet */
+}
+
+/* On hover (dark mode — lighter shade of purple) */
+body[data-theme="dark"] .skill-card:hover .bg-primary {
+  background-color: #b794f4 !important; /* soft lavender glow */
+}
+
+/* Skill level indicators (optional accent dots or bars) */
+.skills-section li::before {
+  content: "•";
+  color: #6b46c1;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* Hover effect */
+body[data-theme="light"] .skill-card:hover {
+  background: #f0e6ff;
+}
+
+body[data-theme="dark"] .skill-card:hover {
+  background: #4a2c8a;
+  color: #f7fafc;
+}
+
+/* Responsive grid for skill boxes */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
