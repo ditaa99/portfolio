@@ -2,22 +2,22 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 
 const projectData = [
-  {
-    title: "placeholder",
-    description: "will come back soon and add more projects",
-    tech: "",
-    github: ""
+{
+    title: "AgroClimate",
+    description: "A reproducible data analysis pipeline using Snakemake to analyze the impact of climate variables on agricultural crop yields in Brandenburg, Germany",
+    tech: "Python, Snakemake, Pandas, Matplotlib, Geopandas",
+    github: "https://gitup.uni-potsdam.de/pelaj1/AgroClimate"
   },
   {
-    title: "",
-    description: "",
-    tech: "",
-    github: ""
+    title: "Diagnosis Trends in Germany",
+    description: "Analyzes and visualizes long-term trends in German hospital diagnoses using open-source data from Destatis (Statistisches Bundesamt)",
+    tech: "Python, Jupyter, Pandas, Matplotlib, Seaborn",
+    github: "https://gitup.uni-potsdam.de/pelaj1/diagnosis-trends-germany"
   },
   {
     title: "GenLang",
     description: "An educational software for learning about formal languages and automata theory. Currently supports regular languages with plans to expand.",
-    tech: "Python, Flas, React",
+    tech: "Python, Flask, React",
     github: "https://github.com/ditaa99/GenLang"
   },
   {

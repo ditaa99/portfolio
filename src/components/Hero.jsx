@@ -1,5 +1,5 @@
 import React from 'react';
-import profile from '../assets/profile.jpg'; //placeholder for now, i will decide for the image once i set up everything else
+import profile from '../assets/dita.jpg';
 
 const Hero = () => (
   <section className="container mt-5 pt-4" id="hero">
