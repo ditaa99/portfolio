@@ -14,6 +14,39 @@ body[data-theme="dark"] {
   background: #4a2c8a;
 }
 
+/* 'profile' pic */
+.profile-pic {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover; 
+  margin: 0 auto; 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Responsive size for smaller screens */
+@media (max-width: 767.98px) {
+  .profile-pic {
+    max-width: 180px;
+    max-height: 180px;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Hover Effect (Movement) */
+body[data-theme="light"] .profile-pic:hover {
+  transform: scale(1.05) rotate(-3deg);
+  /* Override shadow-lg with a stronger, theme-aware shadow */
+  box-shadow: 0 10px 25px rgba(111, 66, 193, 0.25) !important;
+}
+
+body[data-theme="dark"] .profile-pic:hover {
+  transform: scale(1.05) rotate(-2deg);
+  /* Override shadow-lg with a stronger, theme-aware shadow */
+  box-shadow: 0 10px 25px rgba(174, 162, 255, 0.4) !important;
+}
+
 /* Buttons */
 .btn-outline-primary,
 .btn-gradient {
@@ -79,36 +112,7 @@ body[data-theme="dark"] .about-section {
   box-shadow: 0 8px 20px rgba(174, 162, 255, 0.6) !important;
 }
 
-/* Skills */
-/* .skill-card {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: all 0.3s ease;
-  border-radius: 12px;
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-}
-
-.progress-bar {
-  transition: width 0.5s ease;
-}
-
-.--bs-progress-bar, .bg-primary {
-  background-color: #4a2c8a !important;
-}
-
-@media (max-width: 768px) {
-  .skill-card {
-    margin-bottom: 1.5rem;
-  }
-} */
-
-/* ============================= */
-/* Skills Section (Light & Dark) */
-/* ============================= */
+/* -- Skills Section (Light & Dark) -- */
 
 .skills-section {
   padding: 3rem 0;
@@ -196,4 +200,78 @@ body[data-theme="dark"] .skill-card:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
+}
+
+
+/* -- Scroll to top Button -- */
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: linear-gradient(135deg, #6b46c1, #9f7aea);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(111, 66, 193, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-4px);
+  background: #4a2c8a;
+  box-shadow: 0 8px 18px rgba(111, 66, 193, 0.6);
+}
+
+/* Theme support */
+body[data-theme="dark"] .scroll-to-top {
+  background: linear-gradient(135deg, #9f7aea, #b794f4);
+  box-shadow: 0 4px 10px rgba(159, 122, 234, 0.3);
+}
+
+body[data-theme="dark"] .scroll-to-top:hover {
+  background: #b794f4;
+  color: #1a202c;
+}
+
+
+/* Footer */
+.footer {
+  background-color: transparent;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode */
+body[data-theme="light"] .footer {
+  color: #4a2c8a;
+}
+
+/* Dark mode */
+body[data-theme="dark"] .footer {
+  color: #e9d8fd;
+}
+
+/* Footer links */
+.footer-link {
+  cursor: pointer;
+  font-weight: 600;
+  color: #6b46c1;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #9f7aea;
+  text-shadow: 0 0 8px rgba(159, 122, 234, 0.7);
+}
+
+body[data-theme="dark"] .footer-link:hover {
+  color: #b794f4;
+  text-shadow: 0 0 8px rgba(183, 148, 244, 0.9);
 }

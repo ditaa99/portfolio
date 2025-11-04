@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './index.css';
@@ -24,6 +25,7 @@ function App() {
       <Skills />
       <Contact />
       <Footer/>
+      <ScrollToTopButton />
     </>
   );
 }
