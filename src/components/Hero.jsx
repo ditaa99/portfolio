@@ -1,6 +1,6 @@
 import React from "react";
 import profile from "../assets/dita.jpg";
-import cv from "../assets/Dita_CV.pdf";
+import cv from "../assets/Dita_CV_short.pdf";
 
 const FaDownload = () => (
   <svg
