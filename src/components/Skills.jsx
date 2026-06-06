@@ -34,7 +34,6 @@ const Skills = () => {
             
             <div className="skill-badges">
               {group.skills.map((skill, skillIndex) => {
-                // If it's a spoken language with a proficiency suffix (e.g., "Albanian: Native")
                 if (group.title === "Languages" && skill.includes(":")) {
                   const [langName, level] = skill.split(":");
                   return (
@@ -47,7 +46,6 @@ const Skills = () => {
                   );
                 }
                 
-                // Default pill render for general technical tools and frameworks
                 return (
                   <span className="skill-badge" key={skillIndex}>
                     {skill}
