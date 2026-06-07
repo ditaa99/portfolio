@@ -1,6 +1,6 @@
 /* 
    1. DESIGN TOKENS & SYSTEM VARIABLES
-    */
+   */
 :root {
   --dark: #1a202c;
   --purple-dark: #4a2c8a;
@@ -21,13 +21,18 @@
 
 body {
   margin: 0;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+  line-height: 1.6; /* prevent text crowding */
+  letter-spacing: -0.01em;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body[data-theme="light"] {
@@ -40,11 +45,34 @@ body[data-theme="dark"] {
   color: var(--bg-light);
 }
 
+h1, h2, h3, h4 {
+  letter-spacing: -0.02em; /* Gives large headlines an intentional design feel */
+}
+
 /* 
    2. NAVBAR & GLOBAL TYPOGRAPHY UTILITIES
-    */
+   */
 .navbar {
   background: var(--purple-dark);
+}
+
+/* Custom Overrides to fix the Navbar Links layout */
+.navbar .btn-outline-primary {
+  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
+}
+
+/* Interactive Hover state animation */
+.navbar .btn-outline-primary:hover {
+  background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple) 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .headline,
@@ -72,8 +100,7 @@ body[data-theme="dark"] .headline {
   font-style: italic;
 }
 
-/* Global Buttons & Links */
-.btn-outline-primary,
+/* Global Buttons & Links outside navbar */
 .btn-gradient {
   background: linear-gradient(90deg, var(--purple), var(--purple-light));
   color: white;
@@ -91,7 +118,7 @@ body[data-theme="dark"] .headline {
 
 /* 
    3. HERO & PROFILE IMAGE
-    */
+   */
 .profile-pic {
   width: 100%;
   max-width: 300px;
@@ -115,7 +142,7 @@ body[data-theme="dark"] .profile-pic:hover {
 
 /* 
    4. ABOUT SECTION
-    */
+   */
 .about-section {
   border-radius: 1rem;
   padding: 2rem;
@@ -143,7 +170,7 @@ body[data-theme="dark"] .about-section {
 
 /* 
    5. PROJECTS SECTION
-    */
+   */
 .projects-section {
   width: min(1180px, calc(100% - 3rem));
   margin: 0 auto;
@@ -242,7 +269,7 @@ body[data-theme="dark"] .about-section {
 
 /* 
    6. SKILLS SECTION
-    */
+   */
 .skills-section {
   width: min(1180px, calc(100% - 3rem));
   margin: 0 auto;
@@ -361,7 +388,7 @@ body[data-theme="dark"] .skill-badge {
 
 /* 
    7. INTERACTIVE & LAYOUT CONTROLS (SCROLL & FOOTER)
-    */
+   */
 .scroll-to-top {
   position: fixed;
   right: 25px;
@@ -435,7 +462,7 @@ body[data-theme="dark"] .footer-link:hover {
 
 /* 
    8. RESPONSIVE BREAKPOINTS
-  */
+ */
 @media (max-width: 980px) {
   .projects-grid,
   .skills-grid,

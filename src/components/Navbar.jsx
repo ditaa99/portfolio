@@ -14,14 +14,36 @@ const Navbar = () => {
         Dita
       </a>
       <div className="ms-auto d-flex align-items-center">
-        <a href="#projects" className="btn btn-outline-primary mx-2">
+        <a href="#about" className="btn btn-outline-primary mx-1 mx-md-2">
+          About
+        </a>
+        <a href="#education" className="btn btn-outline-primary mx-1 mx-md-2">
+          Education
+        </a>
+        <a href="#experience" className="btn btn-outline-primary mx-1 mx-md-2">
+          Experience
+        </a>
+        <a href="#projects" className="btn btn-outline-primary mx-1 mx-md-2">
           Projects
         </a>
-        <a href="#contact" className="btn btn-outline-primary mx-2">
+        <a href="#skills" className="btn btn-outline-primary mx-1 mx-md-2">
+          Skills
+        </a>
+        <a href="#contact" className="btn btn-outline-primary mx-1 mx-md-2">
           Contact Me
         </a>
-        <button onClick={() => setDark(!dark)}>
-          {dark ? <BsFillSunFill /> : <BsFillMoonFill />}
+
+        <button
+          onClick={() => setDark(!dark)}
+          className="btn text-white p-2 d-inline-flex align-items-center justify-content-center"
+          style={{ border: "none", fontSize: "1.1rem" }}
+          aria-label="Toggle Theme"
+        >
+          {dark ? (
+            <BsFillSunFill style={{ color: "#fbd38d" }} />
+          ) : (
+            <BsFillMoonFill style={{ color: "#e9d8fd" }} />
+          )}
         </button>
       </div>
     </nav>

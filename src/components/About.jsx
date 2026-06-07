@@ -2,28 +2,27 @@ import React from "react";
 
 const About = () => (
   <section className="container my-5" id="about" data-aos="fade-up">
-    <div className="bg-light p-5 rounded shadow about-section">
+    {/* Removed bg-light to prevent dark-mode theme clashing */}
+    <div className="p-5 rounded shadow about-section">
       <h3 className="fw-bold mb-3">About Me</h3>
       <p>
-        I am <span className="text-primary fw-bold">Dita Pelaj</span> from
-        Kosova. I graduated in{" "}
-        <span className="text-secondary fst-italic">Computer Science</span> in
-        Pécs, Hungary and am currently pursuing my master's in{" "}
+        I am a{" "}
+        <span className="text-secondary fst-italic">Computer Science</span> graduate from
+        Pécs, Hungary and am currently pursuing my Master's in{" "}
         <span className="text-secondary fst-italic">Data Science</span> in
-        Potsdam, Germany.
-        <br />
-        <br />
-        I am open to new collaborations or work opportunities where I can
-        contribute and grow. Feel free to connect with me! :)
-        <br />
-        <br />
-        I am passionate about the intersection of math and coding. My
-        areas of focus include Machine Learning, Finite Automata, and developing
-        software that explains complex concepts intuitively. I also enjoy
-        developing web applications and teaching.
-        <br />
-        <br />
-        Besides coding, I love learning languages, listening to music, and hiking.
+        Potsdam, Germany. Driven by a deep fascination with the intersection of
+        mathematics and code, my academic and research focus spans Machine
+        Learning, Finite Automata, and building educational software that makes
+        complex theoretical concepts intuitive.
+      </p>
+      <p>
+        Besides coding, I enjoy learning languages, diving into music, and
+        exploring hiking trails.
+      </p>
+      <p className="mb-0">
+        I am always open to <i>new collaborations</i>, research projects, or
+        engineering opportunities where I can contribute, solve meaningful
+        problems, and grow. Feel free to connect with me! :)
       </p>
     </div>
   </section>
