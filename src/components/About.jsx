@@ -1,7 +1,7 @@
 import React from "react";
 
 const About = () => (
-  <section className="container my-5" id="about" data-aos="fade-up">\
+  <section className="container my-5" id="about" data-aos="fade-up">
     <div className="p-5 rounded shadow about-section">
       <h3 className="fw-bold mb-3">About Me</h3>
       <p>

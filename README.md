@@ -1,18 +1,71 @@
-# React + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a minimal, high-performance setup to get React working in Vite with Hot Module Replacement (HMR).
 
-Currently, two official plugins are available:
+## Live Demo
+🔗 **[https://ditaa99.github.io/portfolio/](https://ditaa99.github.io/portfolio/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Tech Stack & Architecture
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Frontend Core:** React, HTML5, CSS3 (Modern Flexbox/Grid layouts)
+- **Build Tool:** Vite (Fast development server with HMR)
+- **UI Framework:** Bootstrap 5 (Customized overrides for consistent color tokens)
+- **Icons:** React Icons (`fa` FontAwesome, `bs` Bootstrap Icons)
+- **Animations:** AOS (Animate On Scroll) library
+- **Data Management:** Fully decoupled architecture using a centralized dynamic data repository (`src/data/`) for effortless scaling and maintenance.
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+src/
+├── components/   # jsx components
+├── data/         # .js files for cleaner cards
+├── assets/       # attachments - images, pdfs
+├── theme.js      # Unified React Context API for global theme switching
+├── index.css     # Custom CSS architecture (Design system tokens, custom cards)
+├── App.jsx       # Logical sequential layout pipeline
+└── main.jsx      # Application entry mounting script
+```
+
+---
+
+## Getting Started (Local Development)
+
+Follow these steps to spin up the portfolio site in your local development workspace:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/ditaa99/portfolio.git
+cd portfolio
+
+```
+
+### 2. Install Project Dependencies
+
+```bash
+npm install
+
+```
+
+### 3. Launch the Local Development Server
+
+```bash
+npm run dev
+
+```
+
+Open your browser and navigate to `http://localhost:5173` (or the fallback local terminal port provided by Vite).
+
+### 4. Compiling a Production Build
+
+To export a highly minified, chunk-optimized static bundle ready for deployment:
+
+```bash
+npm run build
+
+```
