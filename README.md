@@ -25,7 +25,7 @@ src/
 ├── components/   # jsx components
 ├── data/         # .js files for cleaner cards
 ├── assets/       # attachments - images, pdfs
-├── theme.js      # Unified React Context API for global theme switching
+├── theme.jsx      # Unified React Context API for global theme switching
 ├── index.css     # Custom CSS architecture (Design system tokens, custom cards)
 ├── App.jsx       # Logical sequential layout pipeline
 └── main.jsx      # Application entry mounting script

@@ -1,24 +1,34 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 
 const Footer = () => {
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const links = [
+    { label: "About", href: "#about" },
+    { label: "Education", href: "#education" },
+    { label: "Experience", href: "#experience" },
+    { label: "Projects", href: "#projects" },
+    { label: "Skills", href: "#skills" },
+    { label: "Contact Me", href: "#contact" },
+  ];
+
   return (
-    <footer className="py-3 text-center shadow-sm mt-5" style={{ background: "var(--bg-color)" }}>
-      <Container>
-        <p className="mb-0">
-          <span onClick={() => scrollToSection("about")} className="footer-link">About</span> ·{" "}
-          <span onClick={() => scrollToSection("projects")} className="footer-link">Projects</span> ·{" "}
-          <span onClick={() => scrollToSection("skills")} className="footer-link">Skills</span>
-          <br />
-          © {new Date().getFullYear()} Dita · All rights reserved
-        </p>
-      </Container>
+    <footer className="footer py-4">
+      <div className="container text-center">
+        <div className="footer-links">
+          {links.map((link, index) => (
+            <React.Fragment key={link.label}>
+              <a href={link.href} className="footer-link">
+                {link.label}
+              </a>
+
+              {index < links.length - 1 && (
+                <span className="footer-separator">·</span>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+
+        <p className="mt-3 mb-0">© {new Date().getFullYear()} Dita Pelaj</p>
+      </div>
     </footer>
   );
 };

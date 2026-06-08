@@ -1,6 +1,4 @@
-/* 
-   1. DESIGN TOKENS & SYSTEM VARIABLES
-   */
+/* 1. DESIGN TOKENS & SYSTEM VARIABLES */
 :root {
   --dark: #1a202c;
   --purple-dark: #4a2c8a;
@@ -21,7 +19,8 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition:
@@ -45,59 +44,82 @@ body[data-theme="dark"] {
   color: var(--bg-light);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   letter-spacing: -0.02em; /* Gives large headlines an intentional design feel */
 }
 
-/* 
-   2. NAVBAR & GLOBAL TYPOGRAPHY UTILITIES
-   */
+/* 2. NAVBAR & GLOBAL TYPOGRAPHY UTILITIES */
 .navbar {
   background: var(--purple-dark);
+  padding: 0.75rem 0;
 }
 
-/* Custom Overrides to fix the Navbar Links layout */
-.navbar .btn-outline-primary {
-  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%) !important;
+.navbar-brand {
+  font-size: 1.35rem;
+}
+
+.navbar .nav-link.btn-outline-primary {
+  background: linear-gradient(135deg, var(--purple), var(--purple-light));
   color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   font-weight: 500;
   border-radius: 8px;
   padding: 0.5rem 1rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
 }
 
-/* Interactive Hover state animation */
-.navbar .btn-outline-primary:hover {
-  background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple) 100%) !important;
-  color: #ffffff !important;
+.navbar .nav-link.btn-outline-primary:hover {
+  background: linear-gradient(135deg, var(--purple-dark), var(--purple));
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.headline,
-.text-accent {
-  color: var(--purple-dark);
+.custom-toggler {
+  color: white;
+  border: none;
+  font-size: 1.8rem;
+  padding: 0.25rem 0.5rem;
+  background: transparent;
 }
 
-body[data-theme="dark"] .headline {
-  color: var(--lavender);
+.custom-toggler:focus {
+  box-shadow: none;
 }
 
-.text-primary {
-  color: var(--purple) !important;
+.theme-toggle-btn {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1.15rem;
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.text-secondary {
-  color: var(--purple-light) !important;
-}
+/* Mobile navbar */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    margin-top: 1rem;
+    padding: 1rem 0;
+  }
 
-.fw-bold {
-  font-weight: 700;
-}
+  .navbar-nav {
+    align-items: stretch !important;
+    gap: 0.75rem;
+  }
 
-.fst-italic {
-  font-style: italic;
+  .navbar .nav-link.btn-outline-primary {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .theme-toggle-btn {
+    align-self: center;
+    margin-top: 0.25rem;
+  }
 }
 
 /* Global Buttons & Links outside navbar */
@@ -116,9 +138,7 @@ body[data-theme="dark"] .headline {
   box-shadow: 0 4px 15px rgba(111, 66, 193, 0.5);
 }
 
-/* 
-   3. HERO & PROFILE IMAGE
-   */
+/* 3. HERO & PROFILE IMAGE*/
 .profile-pic {
   width: 100%;
   max-width: 300px;
@@ -140,9 +160,7 @@ body[data-theme="dark"] .profile-pic:hover {
   box-shadow: 0 10px 25px rgba(174, 162, 255, 0.4) !important;
 }
 
-/* 
-   4. ABOUT SECTION
-   */
+/* 4. ABOUT SECTION */
 .about-section {
   border-radius: 1rem;
   padding: 2rem;
@@ -168,9 +186,7 @@ body[data-theme="dark"] .about-section {
   box-shadow: 0 8px 20px rgba(174, 162, 255, 0.35) !important;
 }
 
-/* 
-   5. PROJECTS SECTION
-   */
+/* 5. PROJECTS SECTION */
 .projects-section {
   width: min(1180px, calc(100% - 3rem));
   margin: 0 auto;
@@ -267,9 +283,7 @@ body[data-theme="dark"] .about-section {
   color: white;
 }
 
-/* 
-   6. SKILLS SECTION
-   */
+/* 6. SKILLS SECTION */
 .skills-section {
   width: min(1180px, calc(100% - 3rem));
   margin: 0 auto;
@@ -297,7 +311,7 @@ body[data-theme="dark"] .about-section {
 }
 
 .skill-header-icon {
-  color: var(--purple); /* Uses your primary theme purple color */
+  color: var(--purple);
   font-size: 1.25rem;
   flex-shrink: 0;
   transition: color 0.25s ease;
@@ -386,9 +400,7 @@ body[data-theme="dark"] .skill-badge {
   color: var(--lavender);
 }
 
-/* 
-   7. INTERACTIVE & LAYOUT CONTROLS (SCROLL & FOOTER)
-   */
+/* 7. INTERACTIVE & LAYOUT CONTROLS */
 .scroll-to-top {
   position: fixed;
   right: 25px;
@@ -428,41 +440,63 @@ body[data-theme="dark"] .scroll-to-top:hover {
 
 /* Footer Section */
 .footer {
-  background-color: transparent;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
+  margin-top: 5rem;
+  padding: 2rem 0;
 }
 
-body[data-theme="light"] .footer {
-  color: var(--purple-dark);
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-body[data-theme="dark"] .footer {
-  color: var(--lavender);
+.footer-separator {
+  margin: 0 0.75rem;
+  color: var(--purple-light);
+  font-weight: 600;
+  display: inline;
 }
 
 .footer-link {
-  cursor: pointer;
-  font-weight: 600;
+  text-decoration: none;
   color: var(--purple);
-  transition:
-    color 0.2s ease,
-    text-shadow 0.2s ease;
+  font-weight: 600;
+  transition: all 0.2s ease;
 }
 
 .footer-link:hover {
   color: var(--purple-light);
-  text-shadow: 0 0 8px rgba(159, 122, 234, 0.7);
+  transform: translateY(-2px);
 }
 
-body[data-theme="dark"] .footer-link:hover {
-  color: #b794f4;
-  text-shadow: 0 0 8px rgba(183, 148, 244, 0.9);
+@media (max-width: 768px) {
+  .footer-links {
+    gap: 1rem;
+  }
+
+  .footer-link {
+    font-size: 0.95rem;
+  }
 }
 
-/* 
-   8. RESPONSIVE BREAKPOINTS
- */
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .footer-separator {
+    display: none;
+  }
+
+  .footer-link {
+    padding: 0;
+    line-height: 1.2;
+  }
+}
+
+/* 8. RESPONSIVE BREAKPOINTS */
 @media (max-width: 980px) {
   .projects-grid,
   .skills-grid,
@@ -491,9 +525,7 @@ body[data-theme="dark"] .footer-link:hover {
   }
 }
 
-/* ==========================================================================
-   TIMELINE SECTIONS (EDUCATION & EXPERIENCE LAYOUT)
-   ========================================================================== */
+/* EDUCATION & EXPERIENCE LAYOUT */
 .education-section,
 .experience-section {
   width: min(1180px, calc(100% - 3rem));
@@ -524,7 +556,9 @@ body[data-theme="dark"] .footer-link:hover {
   background: linear-gradient(135deg, #ffffff 0%, var(--lavender) 100%);
   color: var(--dark);
   box-shadow: var(--card-shadow);
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
+  transition:
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s ease;
 }
 
 .timeline-card:hover {
@@ -617,7 +651,7 @@ body[data-theme="dark"] .timeline-meta {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .timeline-meta {
     align-items: flex-start;
     margin-top: 0.25rem;

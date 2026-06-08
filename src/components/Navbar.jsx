@@ -1,50 +1,64 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ThemeContext } from "../theme";
-// import { SunFill, MoonFill } from 'react-icons/bs';
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
-import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
+import { BsFillMoonFill, BsFillSunFill, BsList, BsX } from "react-icons/bs";
 
 const Navbar = () => {
   const { dark, setDark } = useContext(ThemeContext);
+  const [open, setOpen] = useState(false);
+
+  const closeMenu = () => setOpen(false);
 
   return (
-    <nav className="navbar navbar-expand-lg shadow-sm px-3 sticky-top gradient-bg">
-      <a className="navbar-brand fw-bold" href="#hero">
-        Dita
-      </a>
-      <div className="ms-auto d-flex align-items-center">
-        <a href="#about" className="btn btn-outline-primary mx-1 mx-md-2">
-          About
-        </a>
-        <a href="#education" className="btn btn-outline-primary mx-1 mx-md-2">
-          Education
-        </a>
-        <a href="#experience" className="btn btn-outline-primary mx-1 mx-md-2">
-          Experience
-        </a>
-        <a href="#projects" className="btn btn-outline-primary mx-1 mx-md-2">
-          Projects
-        </a>
-        <a href="#skills" className="btn btn-outline-primary mx-1 mx-md-2">
-          Skills
-        </a>
-        <a href="#contact" className="btn btn-outline-primary mx-1 mx-md-2">
-          Contact Me
+    <nav className="navbar navbar-expand-lg fixed-top shadow-sm">
+      <div className="container">
+        <a
+          className="navbar-brand text-white fw-bold"
+          href="#home"
+          onClick={closeMenu}
+        >
+          Dita
         </a>
 
         <button
-          onClick={() => setDark(!dark)}
-          className="btn text-white p-2 d-inline-flex align-items-center justify-content-center"
-          style={{ border: "none", fontSize: "1.1rem" }}
-          aria-label="Toggle Theme"
+          className="navbar-toggler custom-toggler"
+          type="button"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle navigation"
+          aria-expanded={open}
         >
-          {dark ? (
-            <BsFillSunFill style={{ color: "#fbd38d" }} />
-          ) : (
-            <BsFillMoonFill style={{ color: "#e9d8fd" }} />
-          )}
+          {open ? <BsX /> : <BsList />}
         </button>
+
+        <div className={`collapse navbar-collapse ${open ? "show" : ""}`}>
+          <div className="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            {[
+              "About",
+              "Education",
+              "Experience",
+              "Projects",
+              "Skills",
+              "Contact Me",
+            ].map((item) => (
+              <a
+                key={item}
+                className="nav-link btn btn-outline-primary text-white"
+                href={`#${item.toLowerCase().replace(" me", "").replace(" ", "-")}`}
+                onClick={closeMenu}
+              >
+                {item}
+              </a>
+            ))}
+
+            <button
+              onClick={() => setDark(!dark)}
+              className="theme-toggle-btn"
+              aria-label="Toggle Theme"
+            >
+              {dark ? <BsFillSunFill /> : <BsFillMoonFill />}
+            </button>
+          </div>
+        </div>
       </div>
     </nav>
   );
