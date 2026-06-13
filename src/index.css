@@ -1,10 +1,12 @@
 /* 1. DESIGN TOKENS & SYSTEM VARIABLES */
 :root {
   --dark: #1a202c;
-  --purple-dark: #4a2c8a;
-  --purple: #6b46c1;
-  --purple-light: #9f7aea;
-  --lavender: #e9d8fd;
+  --purple-dark: #43365c;
+  --purple: #5f548c;
+  --purple-light: #8f88b7;
+  --lavender: #ece9f4;
+  --card-shadow: 0 8px 22px rgba(67, 54, 92, 0.12);
+  --card-shadow-hover: 0 12px 28px rgba(67, 54, 92, 0.18);
   --bg-light: #f7fafc;
   --card-shadow: 0 8px 22px rgba(111, 66, 193, 0.15);
   --card-shadow-hover: 0 12px 28px rgba(111, 66, 193, 0.25);
@@ -145,6 +147,7 @@ h4 {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   margin: 0 auto;
+  margin-top: 2rem;
   transition:
     transform 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
@@ -215,7 +218,7 @@ body[data-theme="dark"] .about-section {
   padding: 1.75rem;
   border-radius: 12px;
   border: 1px solid var(--purple-light);
-  background: linear-gradient(135deg, var(--purple-light), var(--lavender));
+  background: linear-gradient(135deg, #ffffff, var(--lavender));
   color: var(--dark);
   box-shadow: var(--card-shadow);
   transition:

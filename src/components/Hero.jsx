@@ -23,7 +23,7 @@ const Hero = () => (
       <div className="col-md-7" data-aos="fade-right">
         <h1 className="display-5 fw-bold mb-2">Hi, I'm Dita 👋</h1>
         <h2 className="mb-3 headline">
-          Data Science Master's student & Software Developer
+          Data Science MSc student & Software Developer
         </h2>
         <p className="lead">
           Passionate about Machine Learning and Web Development.

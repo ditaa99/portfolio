@@ -7,7 +7,7 @@ export const education = [
     highlights: [
       "Developed AI-based systems, building and training ANN and CNN models to predict train delays from weather data.",
       "Applied statistical data analysis to explore and interpret datasets, uncovering trends and insights.",
-      "Built scalable data pipelines in Research Software Engineering, ensuring efficient storage, access, and reproducible workflows.",
+      "Built reproducible data pipelines for research-oriented workflows, focusing on efficient data storage, access, and analysis.",
     ],
   },
   {

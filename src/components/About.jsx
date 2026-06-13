@@ -5,11 +5,9 @@ const About = () => (
     <div className="p-5 rounded shadow about-section">
       <h3 className="fw-bold mb-3">About Me</h3>
       <p>
-        I am a{" "}
-        <span className="text-secondary fst-italic">Computer Science</span> graduate from
-        Pécs, Hungary and am currently pursuing my Master's in{" "}
-        <span className="text-secondary fst-italic">Data Science</span> in
-        Potsdam, Germany. Driven by a deep fascination with the intersection of
+        I am a <i>Computer Science</i> graduate from Pécs, Hungary and am
+        currently pursuing my Master's in <i>Data Science</i> in Potsdam,
+        Germany. Driven by a deep fascination with the intersection of
         mathematics and code, my academic and research focus spans Machine
         Learning, Finite Automata, and building educational software that makes
         complex theoretical concepts intuitive.
@@ -21,7 +19,7 @@ const About = () => (
       <p className="mb-0">
         I am always open to <i>new collaborations</i>, research projects, or
         engineering opportunities where I can contribute, solve meaningful
-        problems, and grow. Feel free to connect with me! :)
+        problems, and grow.
       </p>
     </div>
   </section>

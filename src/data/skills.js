@@ -1,11 +1,31 @@
 export const skillGroups = [
   {
     title: "Programming & Web Development",
-    skills: ["Python", "Flask", "JavaScript", "React", "HTML", "CSS", "Bootstrap", "PHP", "SQL", "Java", "Spring Boot", "C++"],
+    skills: [
+      "Python",
+      "Flask",
+      "JavaScript",
+      "React",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "PHP",
+      "SQL",
+      "Java",
+      "Spring Boot",
+      "C++",
+    ],
   },
   {
     title: "Data Science & Analysis",
-    skills: ["Pandas", "NumPy", "Matplotlib", "Jupyter", "GeoPandas", "Statistical Analysis"],
+    skills: [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Jupyter",
+      "GeoPandas",
+      "Statistical Analysis",
+    ],
   },
   {
     title: "Databases",
@@ -13,10 +33,16 @@ export const skillGroups = [
   },
   {
     title: "Tools & Workflow",
-    skills: ["Git", "WordPress", "Firebase", "Fly.io", "Docker", "Snakemake"], // Added Docker here!
+    skills: ["Git", "WordPress", "Firebase", "Fly.io", "Docker", "Snakemake"],
   },
   {
     title: "Languages",
-    skills: ["Albanian: Native", "English: Fluent", "German: Intermediate", "Hungarian: Basic", "Norwegian: Basic", "Serbo-Croatian: Basic"],
-  }
+    skills: [
+      "Albanian: Native",
+      "English: Fluent",
+      "German: Intermediate",
+      "Serbo-Croatian: Basic",
+      "Hungarian: Basic",
+    ],
+  },
 ];
