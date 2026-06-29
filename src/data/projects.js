@@ -14,6 +14,13 @@ export const projects = [
     github: "https://gitup.uni-potsdam.de/pelaj1/diagnosis-trends-germany",
   },
   {
+    title: "Appointment or Disappointment",
+    description:
+      "AI-Based Train Delay Prediction - a pair project for the AI based systems course. Built an end-to-end data ingestion pipeline to collect real-time weather and transportation data, then implemented and compared OLS regression and ANN for train delay prediction.",
+    tech: ["Python", "TensorFlow", "Scikit-learn", "Pandas", "NumPy", "Docker"],
+    github: "https://github.com/luisahorlledecastro/AI-CPS",
+  },
+  {
     title: "GenLang",
     description:
       "Educational software for visualizing grammar-based language generation in formal languages and automata theory. Built with React and Flask as part of my BSc thesis. Currently supports regular languages with plans to expand.",
@@ -36,7 +43,8 @@ export const projects = [
   },
   {
     title: "Games WebApp",
-    description: "A group project where I implemented a Maze game.",
+    description:
+      "Group web application project featuring multiple browser-based games. I implemented the Maze game using JavaScript and HTML Canvas, including tile-based maze rendering, keyboard-controlled player movement, wall collision detection, win-state logic, and replay functionality.",
     tech: ["JavaScript", "HTML", "CSS"],
     github:
       "https://github.com/190ibrahim/Web-Application-Project/tree/main/app/MazeGame",

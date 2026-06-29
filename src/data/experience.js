@@ -1,12 +1,5 @@
 export const experience = [
-  {
-    role: "STEM Tutor & Trainer",
-    company: "University of Potsdam - MINT-Orientierung & Tutorienprogramm",
-    location: "Potsdam, Germany",
-    period: "May 2026 - present",
-    highlights: [],
-  },
-  {
+    {
     role: "Research Assistant",
     company: "University of Potsdam - Software Engineering Department",
     location: "Potsdam, Germany",
@@ -16,6 +9,18 @@ export const experience = [
       "Supervised student engineering projects, adopting the role of an 'external client' to provide realistic requirement criteria, change requests, and feedback for BSc students taking the Software Engineering II course.",
     ],
   },
+  {
+    role: "STEM Tutor & Trainer",
+    company: "University of Potsdam - MINT-Orientierung & Tutorienprogramm",
+    location: "Potsdam, Germany",
+    period: "May 2026 - present",
+    highlights: [
+      "Facilitated interactive mentoring sessions and specialized workshops to support student success in STEM (MINT) disciplines.",
+      "Guided incoming students through academic orientation phases, providing foundational knowledge and study strategies.",
+      "Collaborated with faculty to cultivate a supportive learning environment and reinforce complex course concepts.",
+    ],
+  },
+
   {
     role: "Front-End Intern",
     company: "Tech Frame",
